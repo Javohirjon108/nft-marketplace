@@ -1,0 +1,164 @@
+section {
+  width: 100%;
+  height: 457px;
+  position: relative;
+}
+.box {
+  width: 1200px;
+  height: 377px;
+  margin: 40px auto;
+  display: flex;
+}
+.box1 {
+  width: 600px;
+  height: 377px;
+  @include flex(flex, start, space-between, 0px, column, nowrap);
+  h2 {
+    font-family: $workSans;
+    font-weight: 600;
+    font-size: 51px;
+    color: white;
+    width: 510px;
+    height: fit-content;
+  }
+}
+.bio {
+  width: 100%;
+  height: 80px;
+  h5 {
+    color: #858584;
+    font-weight: 700;
+    font-family: $spaceMono;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  span {
+    font-weight: 400;
+    font-size: 22px;
+    font-family: $workSans;
+    color: #ffffff;
+  }
+}
+.link {
+  width: 100%;
+  height: 77px;
+
+  h5 {
+    color: #858584;
+    font-weight: 700;
+    font-family: $spaceMono;
+    font-size: 22px;
+  }
+  a {
+    font-size: 35px;
+    position: relative;
+    color: #858584;
+    margin-left: 30px;
+  }
+}
+.sold {
+  width: 510px;
+  height: 75px;
+  color: #ffffff;
+  @include flex(flex, start, space-between, 0px, row, nowrap);
+}
+.vol {
+  width: 156px;
+  height: 75px;
+  h4 {
+    font-weight: 700;
+    font-size: 28px;
+    font-family: spaceMono;
+    margin-bottom: 10px;
+  }
+  span {
+    font-family: $workSans;
+    font-weight: 400;
+    font-size: 22px;
+  }
+}
+.wrap {
+  width: 100%;
+  height: 280px;
+  @include flex(flex, start, space-between, 0px, column, nowrap);
+}
+.box2 {
+  width: 600px;
+  height: 377px;
+  @include flex(flex, start, end, 0px, row, nowrap);
+  div {
+    width: 351px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 576px) {
+  section {
+    height: 576px;
+    align-items: center;
+  }
+  .box {
+    width: 335px;
+    height: 466px;
+  }
+  .box1 {
+    width: 100%;
+    height: 100%;
+    h2 {
+      font-size: 28px;
+      width: 100%;
+    }
+  }
+  .box2 {
+    width: inherit;
+    height: 140px;
+    position: absolute;
+    top: 80px;
+    div {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+  }
+  .wrap {
+    width: 100%;
+    height: 280px;
+    justify-content: space-around;
+  }
+  .sold {
+    width: 100%;
+    height: 57px;
+  }
+  .vol {
+    width: 91px;
+    height: 57px;
+    h4 {
+      font-size: 22px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  .bio {
+    width: 100%;
+    height: 54px;
+    h5,
+    span {
+      font-size: 16px;
+    }
+  }
+  .link {
+    width: 100%;
+    height: 65px;
+    h5 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    a {
+      font-size: 22px;
+      margin-left: 20px;
+    }
+  }
+}

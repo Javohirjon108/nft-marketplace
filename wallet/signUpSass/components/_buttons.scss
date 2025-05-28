@@ -1,0 +1,93 @@
+$pink: #A259FF;
+$white: #FFFFFF;
+$workSans: "Work Sans", sans-serif;
+.btn{
+    width: 152px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: $pink;
+    border: none;
+    font-family: $workSans;
+    font-weight: 600;
+    font-size: 18px;
+    color: $white;
+    cursor: pointer;
+     transition: 0.8s ease;
+    &:hover{
+        color: dodgerblue;
+    }
+}
+.btm{
+    @extend .btn;
+    width: 225px;
+    font-weight: 400;
+}
+.bts{
+    width: 250px;
+    height: 60px;
+    border-radius: 16px;
+    border: 1px solid $pink;
+    background-color: transparent;
+    font-family: $workSans;
+    font-weight: 600;
+    color: $white;
+    transition: 0.8s ease;
+    &:hover{
+        color: $pink;
+    }
+    cursor: pointer;
+}
+.eye{
+    @extend .bts;
+    width: 187px;
+}
+.eyes{
+    width: 198px;
+    height: 60px;
+    background-color: $white;
+    color: #2B2B2B;
+    border: none;
+    font-family: $workSans;
+    font-weight: 600;
+    border-radius: 16px;
+    font-size: 22px;
+    cursor: pointer;
+    &:hover{
+        color: $pink;
+    }
+    transition: 0.8s ease;
+}
+.bttn{
+    @extend .btm;
+    width: 211px;
+    position: absolute;
+    top: 0;
+    left: 51%;
+}
+.create{
+    @extend .btm;
+    width: 100%;
+    font-weight: 600;
+}
+@media only screen and (max-width: 576px){
+    .btn{
+        display: none;
+    }
+    .btm{
+        width: 100%;
+        display: block;
+    }
+    .bts{
+        width: 100%;
+    }
+    .eyes{
+        width: 100%;
+        font-size: 18px;
+    }
+    .bttn{
+        position: relative;
+        left: 0%;
+        height: 46px;
+        width: 100%;
+    }
+}

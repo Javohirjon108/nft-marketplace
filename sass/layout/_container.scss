@@ -1,0 +1,122 @@
+.container{
+    width: 100%;
+    height: 640px;
+    position: relative;
+    background-image: linear-gradient(#a159ff00,#A259FF);
+    @include flex(flex, end, center, 0px, row, nowrap); 
+}
+.back{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -3;
+}
+.content{
+    width: 1200px;
+    position: relative;
+    bottom: 60px;
+    height: 220px;
+    @include flex(flex, center, space-between, 0px, row, nowrap); 
+}
+.sinf1{
+    width: 775px;
+    height: 220px;
+        @include flex(flex, start, space-evenly, 0px, column, nowrap); 
+    h2{
+        font-size: 51px;
+        font-weight: 600;
+        color: white;
+        font-family: $workSans;
+    }
+}
+.shroomi{
+    width: 151px;
+    height: 44px;
+    border-radius: 18px;
+    background-color: #3b3b3b85;
+    padding: 0 15px;
+    @include flex(flex, center, start, 10px, row, nowrap); 
+    .avatar{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    span{
+        font-weight: 400;
+        color: white;
+        font-family: $workSans;
+    }
+}
+.sinf2{
+    width: 425px;
+    height: 220px;
+    background-color: #3B3B3B80;
+    border-radius: 16px;
+    @include flex(flex, start, space-evenly, 0px, column, nowrap); 
+    .time{
+        width: 90%;
+        height: 135px;
+        margin: 0 auto;
+        @include flex(flex, center, center, 0px, row, nowrap); 
+    }
+    span{
+        font-weight: 400;
+        color: white;
+        margin: 0 35px; 
+        font-family: $spaceMono;
+    }
+}
+.times{
+    width: 32%;
+    height: 100px;
+    @include flex(flex, center, center, 0px, column, nowrap); 
+    span{
+        color: white;
+        font-weight: 700;
+        font-size: 38px;
+        font-family: $spaceMono;
+    }
+    p{
+        font-family: $spaceMono;
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+    }
+}
+.nuqt{
+    width: fit-content;
+    font-family:$spaceMono;
+    font-weight: 700;
+    font-size: 28px;
+    color: white;
+}
+@media only screen and (max-width: 576px){
+    .container{
+        width: 100%;
+        height: 590px;
+        @include flex(flex, center, center, 0px, row, nowrap); 
+    }
+    .content{
+        width: 90%;
+        height: 500px;
+        bottom: 0;
+    }
+    .sinf1{
+        h2{
+            font-size: 38px;
+        }
+        width: 100%;
+        height: 90%;
+        @include flex(flex, start, space-between, 0px, column, nowrap); 
+    }
+    .sinf2{
+        width: 100%;
+        height: 200px;
+        position: absolute;
+    }
+    .shroomi{
+        margin-bottom: 20px;
+    }
+}

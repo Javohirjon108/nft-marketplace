@@ -1,0 +1,76 @@
+nav {
+  width: 100%;
+  height: 271px;
+  @include flex(flex, center, space-around, 0px, column, nowrap);
+  .bir {
+    width: 1200px;
+    height: 111px;
+    h2 {
+      font-size: 51px;
+      font-weight: 600;
+      font-family: $workSans;
+      color: white;
+      margin-bottom: 10px;
+    }
+    span {
+      font-weight: 400;
+      font-family: $workSans;
+      font-size: 22px;
+      color: white;
+    }
+  }
+  .ikki {
+    width: 100%;
+    height: 60px;
+  }
+}
+.uch {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  @include flex(flex, center, space-around, 0px, row, nowrap);
+  p {
+    width: 262px;
+    height: 100%;
+    border-bottom: 2px solid transparent;
+    font-size: 22px;
+    color: #858584;
+    font-family: $workSans;
+    font-weight: 600;
+    text-align: center;
+    line-height: 60px;
+    transition: 0.8s ease;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 2px solid white;
+      color: white;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  nav {
+    height: 203px;
+    .bir {
+      width: 335px;
+      height: 95px;
+      h2 {
+        font-size: 28px;
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+  .ikki {
+    width: 100%;
+  }
+  .uch {
+    width: 100%;
+    height: 60px;
+    justify-content: space-evenly;
+    p {
+      width: fit-content;
+      font-size: 14px;
+    }
+  }
+}

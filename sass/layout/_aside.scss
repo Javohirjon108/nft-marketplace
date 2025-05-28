@@ -1,0 +1,89 @@
+aside {
+  width: 100%;
+  height: 930px;
+  @include flex(flex, start, space-evenly, 0px, column, nowrap);
+  padding: 0px 8%;
+  h3 {
+    font-weight: 600;
+    font-family: $workSans;
+    font-size: 38px;
+    color: white;
+  }
+}
+.wras {
+  width: 1200px;
+  height: 665px;
+  border: 1px solid transparent;
+  @include flex(flex, start, space-around, 0px, row, wrap);
+}
+.art {
+  width: 240px;
+  height: 316px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.two1 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  @include flex(flex, center, center, 0px, column, nowrap);
+  .yogdu {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    filter: blur(6px);
+    z-index: 1;
+  }
+  .brush {
+    z-index: 2;
+    position: relative;
+  }
+}
+.two2 {
+  width: 240px;
+  height: 76px;
+  background-color: #3b3b3b;
+  span {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: $workSans;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  aside {
+    width: 375px;
+    height: 1085px;
+    @include flex(flex, center, space-evenly, 0px, column, nowrap);
+    h3 {
+      font-size: 28px;
+    }
+  }
+  .wras {
+    width: 335px;
+    height: 920px;
+    overflow: auto;
+  }
+  .art {
+    width: 147px;
+    height: 209px;
+  }
+  .two1 {
+    width: 147px;
+    height: 142px;
+  }
+  .two2 {
+    width: 147px;
+    height: 67px;
+    span {
+      top: 20px;
+      left: 20px;
+      font-size: 16px;
+    }
+  }
+}
